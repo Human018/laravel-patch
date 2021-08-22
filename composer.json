@@ -1,0 +1,28 @@
+{
+    "name": "human018/laravel-patch",
+    "description": "Perform migrations and database patches within your Laravel application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Woodard",
+            "email": "design@simonwoodard.com.au"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "laravel/framework": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Human018\\LaravelPatch\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Human018\\LaravelPatch\\Providers\\LaravelPatchServiceProvider"
+            ]
+        }
+    }
+}
