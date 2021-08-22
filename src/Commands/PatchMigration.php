@@ -54,7 +54,7 @@ class PatchMigration extends Command
         $name = 'Patches/' . Str::ucfirst(Str::camel(trim($this->input->getArgument('name')))) . 'Patch';
         $this->callSilently('make:command', [
             'name' => $name,
-            '--command' => 'patch:' . $this->input->getArgument('name')
+            '--command' => 'patch:' . $this->input->getArgument('name') . ' {--method}'
         ]);
 
         $this->line("<info>Created Command:</info> {$name}");
