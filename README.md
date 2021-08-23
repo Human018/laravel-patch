@@ -15,13 +15,13 @@ This package will create both the migration and an associated patch command, it 
 then run the patch command automatically for you.
 
 ### When might you use this package?
-####Example 1: 
+#### Example 1: 
 You're changing a model relationship to an immediate relationship (hasMany) rather than a distant relation 
 (hasManyThrough). You need to add a new foreignId column to the target models table and then populate that column with 
 the correct ID's. With this package you can create both the migration and the patch command and then run them within the 
 same migration command.
 
-##Index
+## Index
 - [Usage](#usage)
     - [Requirements](#requirements)
     - [Download & Installation](#download--installation)
@@ -29,20 +29,20 @@ same migration command.
     - [Migration Direction](#migration--direction)
 - [License](#license)
 
-##Usage
+## Usage
 
-###Requirements
+### Requirements
 - PHP 7.4
 - Laravel 8
 
-###Download & Installation
+### Download & Installation
 ```shell
 $ composer require human018/laravel-patch
 ```
 
 Laravel will auto discover the package.
 
-###Performing Patches
+### Performing Patches
 Once installed a patch can be created by running the following command in line with the regular Laravel make:migration command.
 ```shell
 $ php artisan make:patch {name} {table|create}
@@ -53,13 +53,27 @@ The package listens for when a migration event is fired, determines if there is 
 
 You will find Patch commands created in your projects 'Commands' folder under the subdirectory 'Patches', where you can perform any tasks that need to be done in line with this migration.
 
-###Migration Direction
+### Migration Direction
 The migration direction is passed to the Patch Command using the 'method' option.
 ```php
 $this->input->getOption('method'); // Returns 'up' or 'down'
 ```
 So if you need to revert some changes you can detect the 'down' direction.
 
-##License
+## License
 
 This project is licensed under the MIT License
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/human018/laravel-patch.svg?style=for-the-badge
+[contributors-url]: https://github.com/Human018/laravel-patch/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/human018/laravel-patch.svg?style=for-the-badge
+[forks-url]: https://github.com/Human018/laravel-patch/network/members
+[stars-shield]: https://img.shields.io/github/stars/human018/laravel-patch.svg?style=for-the-badge
+[stars-url]: https://github.com/Human018/laravel-patch/stargazers
+[issues-shield]: https://img.shields.io/github/issues/human018/laravel-patch.svg?style=for-the-badge
+[issues-url]: https://github.com/Human018/laravel-patch/issues
+[license-shield]: https://img.shields.io/github/license/human018/laravel-patch.svg?style=for-the-badge
+[license-url]: https://github.com/Human018/laravel-patch/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
