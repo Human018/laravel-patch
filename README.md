@@ -1,13 +1,14 @@
-<h1 align="center">Laravel Patch</h1>
-
-<p align="center">Perform migrations and database patches within your Laravel application</p>
-
-<hr/>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+
+<h1 align="center">Laravel Patch</h1>
+
+<p align="center">Perform migrations and database patches within your Laravel application</p>
+
+<hr/>
 
 At times you may need to run a database migration and then perform some kind of patch associated with the migration.
 This package will create both the migration and an associated patch command, it will listen for the migration event and 
